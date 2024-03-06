@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('checkout') {
             steps {
-                // Checkout code from Git repository
-                git 'https://github.com/mallimp/practice.git'
+                checkout scmGit(branches: [[name: '*/Devlopment']], extensions: [], userRemoteConfigs: [[credentialsId: '1d1113c9-ff27-4afa-a253-5254b6410c73', url: 'https://github.com/mallimp/practice.git']])
+        
             }
         }
 
