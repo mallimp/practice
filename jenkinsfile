@@ -13,20 +13,8 @@ pipeline {
             steps {
                 // Execute build commands here
                 // For example, if you're building a Maven project
-                sh 'mvn clean install'
+                sh 'mvn clean package'
             }
         }
     }
-
-    // post {
-    //     always {
-    //         // Clean up any artifacts or perform cleanup tasks
-    //     }
-    //     success {
-    //         // Actions to perform when the pipeline succeeds
-    //     }
-    //     failure {
-    //         // Actions to perform when the pipeline fails
-    //     }
-    // }
 }
